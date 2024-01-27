@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 2px;
+  position: fixed;
+  width: 100%;
+  
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #444;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  top: 50px; /* Adjust this value based on the height of your header */
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+section {
+  padding: 20px;
+  margin-top: 100px; /* Adjust this value based on the combined height of your header and nav */
+}
+
+#home {
+  text-align: justify;
+  line-height: 1.5;
+}
+
+/* Style the button */
+#predictButton {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 50px;
+}

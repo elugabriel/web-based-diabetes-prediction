@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/static/style.css"> -->
+    <link rel="stylesheet" href="/static/predict.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <title>Diabetes and Diet Recommendation System</title>
+</head>
+
+<body>
+    <header>
+        <h1>Diabetes and Diet Recommendation System</h1>
+    </header>
+
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('predict') }}">Predict</a>
+        
+    </nav>
+
+    <section id="home">
+        <div class="container">
+            <h3>
+                
+               Status:  {{ prediction }}
+
+                <br>
+                <br>
+                <br>
+
+                {{ message }}
+
+            </h3>
+
+            <!-- Updated form action to point directly to the '/predict' route -->
+            <!-- <form method="POST" action="{{ url_for('predict') }}">
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary" value="Predict">
+                        Predict
+                    </button>
+                </div>
+            </form> -->
+            </div>
+        </section>
+
+</body>
+
+</html>

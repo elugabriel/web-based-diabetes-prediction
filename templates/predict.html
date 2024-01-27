@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <title>Diabetes and Diet Recommendation System</title>
+</head>
+
+<body>
+    <header>
+        <h1>Diabetes and Diet Recommendation System</h1>
+    </header>
+
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('predict') }}">Predict</a>
+        <a href="#analysis">Analysis</a>
+    </nav>
+
+    <section id="home">
+      <div class="container">
+        <h2 class="card-title">Assessment Form</h2>
+        <form  method="POST" action="{{ url_for('predict_button') }}">
+          <div class="mb-3">
+            <label for="sex" class="form-label"
+              >What is your Gender?
+            </label>
+            <select name="Sex" required id="sex" class="form-select">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+      
+          <div class="mb-3">
+            <label for="glucose" class="form-label"
+              >What is your Glucose Level?</label
+            >
+            <input
+              type="text"
+              name="Glucose"
+              required
+              id="inputPassword5"
+              aria-labelledby="passwordHelpBlock"
+              size="80"
+              class="form-select"
+            />
+          </div>
+      
+      
+          <div class="mb-3">
+            <label for="glucose" class="form-label"
+              >How Old are you?</label
+            >
+            <input
+              type="text"
+              name="AgeCategory"
+              required
+              id="inputPassword5"
+              aria-labelledby="passwordHelpBlock"
+              size="80"
+              class="form-select"
+            />
+          </div>
+      
+          <div class="mb-3">
+            <label for="pregnacy" class="form-label"
+              >How many month(s) pregnant are you?</label
+            >
+            <select
+              name="Pregnancy"
+              required
+              id="stroke"
+              aria-labelledby="passwordHelpBlock"
+              class="form-select"
+            >
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              
+            </select>
+          </div>
+      
+          <div class="mb-3">
+            <label for="bp" class="form-label"
+              >What is your Blood Pressure Level?</label
+            >
+            <input
+              type="text"
+              name="Bp"
+              required
+              id="inputPassword5"
+              aria-labelledby="passwordHelpBlock"
+              size="80"
+              class="form-select"
+            />
+          </div>
+      
+          <div class="mb-3">
+            <label for="skin" class="form-label"
+              >What is your skin thickness?</label
+            >
+            <input
+              type="text"
+              name="Skin"
+              required
+              id="inputPassword5"
+              aria-labelledby="passwordHelpBlock"
+              size="80"
+              class="form-select"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="bmi" class="form-label"
+              >What is your  BMI?</label
+            >
+            <input
+              type="text"
+              name="BMI"
+              required
+              id="inputPassword5"
+              aria-labelledby="passwordHelpBlock"
+              size="80"
+              class="form-select"
+            />
+          </div>
+      
+          <div class="mb-3">
+            <label for="insulin" class="form-label"
+              >What is your Insulin Level?</label
+            >
+            <input
+              type="text"
+              name="Insulin"
+              required
+              id="inputPassword5"
+              aria-labelledby="passwordHelpBlock"
+              size="80"
+              class="form-select"
+            />
+          </div>
+      
+          <div class="mb-3">
+            <label for="dpf" class="form-label"
+              >What is your Diabetes Pedigree Function?</label
+            >
+            <input
+              type="text"
+              name="dpf"
+              required
+              id="inputPassword5"
+              aria-labelledby="passwordHelpBlock"
+              size="80"
+              class="form-select"
+            />
+          </div>
+      
+          <div class="mb-3">
+            <label for="blood" class="form-label"
+              >What is your Blood Group?</label
+            >
+            <select
+              name="blood"
+              required
+              id="blood"
+              aria-labelledby="passwordHelpBlock"
+              class="form-select"
+            >
+              <option value="positve_o">O+</option>
+              <option value="negative_o">O-</option>
+              <option value="positve_a">A+</option>
+              <option value="negative_a">A-</option>
+              <option value="positve_b">B+</option>
+              <option value="negative_b">B-</option>
+              <option value="postive_ab">AB+</option>
+              <option value="negative_ab">AB-</option>
+      
+            </select>
+          </div>
+      
+          
+      
+          <div class="form-group text-center">
+            <button type="submit" class="btn btn-primary" value="Edit">
+              Predict
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+</body>
+
+</html>
